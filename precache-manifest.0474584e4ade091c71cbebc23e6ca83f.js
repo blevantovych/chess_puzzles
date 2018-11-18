@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "4e4432a6b0dfce093177db46dc9bff48",
-    "url": "/chess_puzzles/static/media/wQ.4e4432a6.svg"
+    "revision": "573501233a407695e7b5d5b8e6efc7aa",
+    "url": "/chess_puzzles/static/media/wR.57350123.svg"
   },
   {
-    "revision": "43c5d799709389a1ccd2",
+    "revision": "726b472e8e4b4f49c17b",
     "url": "/chess_puzzles/static/css/main.351b0d55.chunk.css"
   },
   {
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/chess_puzzles/static/media/wB.e0eb761a.svg"
   },
   {
-    "revision": "573501233a407695e7b5d5b8e6efc7aa",
-    "url": "/chess_puzzles/static/media/wR.57350123.svg"
-  },
-  {
-    "revision": "43c5d799709389a1ccd2",
-    "url": "/chess_puzzles/static/js/main.43c5d799.chunk.js"
-  },
-  {
     "revision": "f9c6e522d506c7c3a555e412d34630df",
     "url": "/chess_puzzles/static/media/wN.f9c6e522.svg"
+  },
+  {
+    "revision": "726b472e8e4b4f49c17b",
+    "url": "/chess_puzzles/static/js/main.726b472e.chunk.js"
+  },
+  {
+    "revision": "4e4432a6b0dfce093177db46dc9bff48",
+    "url": "/chess_puzzles/static/media/wQ.4e4432a6.svg"
   },
   {
     "revision": "bb430c603fae05171bfcc6760efda928",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/chess_puzzles/static/media/bK.47af274b.svg"
   },
   {
-    "revision": "6d311379a8701555e16d6fde2b8268cd",
+    "revision": "3e050b7eda13d994b2a676989634be9a",
     "url": "/chess_puzzles/index.html"
   }
 ];

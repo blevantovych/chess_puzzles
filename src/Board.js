@@ -1,26 +1,79 @@
 import {Chessground} from 'chessground'
 import React from 'react';
 
+const IDS_OF_SOLVED_POSITIONS = 'ids_of_solved_positions';
 
 export default class Board extends React.Component {
 
-  componentDidMount () {
-    const board = document.querySelector('#board')
-    console.log('board')
-    console.log(board)
-    const ground =
-      Chessground(board, {
-                    viewOnly: false,
-                    fen: '7k/6p1/3Q1pq1/7p/8/7P/5PP1/1r2R1K1 w - - 2 36',
-                    events: {
-                        move: (...args) => console.log(...args)
-                    }
-					// disableContextMenu: true
-				});
-
+  state = {
+    showSolution: false
   }
+
+  update () {
+    const {fen, condition} = this.props.position;
+    const board = document.querySelector('#board')
+
+    const orientation = condition === '1. ?' ? 'white' : 'black'
+    Chessground(board, {
+      orientation,
+      viewOnly: false,
+      fen,
+      events: {
+          move: () => {
+            let ids = localStorage.getItem(IDS_OF_SOLVED_POSITIONS);
+            if (ids) {
+              ids = JSON.parse(ids)
+            } else {
+              ids = []
+            }
+
+            this.setState({
+              showSolution: true
+            })
+            if (!ids.includes(this.props.id))
+              ids.push(this.props.id)
+            localStorage.setItem(IDS_OF_SOLVED_POSITIONS, JSON.stringify(ids))
+          }
+      }
+    });
+  }
+
+
+  componentDidUpdate() {
+    this.update();
+  }
+  componentDidMount () {
+    this.update();
+  }
+
+  next() {
+    this.props.next();
+    this.setState({showSolution: false})
+  }
+
+  prev() {
+    this.props.prev();
+    this.setState({showSolution: false})
+  }
+
   render() {
-    return (<div id="board"></div>)
+    const {position: {info, solution}, all, solved, id} = this.props;
+    return (<div>
+      <div id="board"></div>
+      <div style={{marginTop: '20px'}}>
+        {info}
+      </div>
+      {this.state.showSolution && <div style={{marginTop: '20px'}}>
+        Solution: {solution}
+      </div>}
+      <div style={{marginTop: '50px'}}>
+        <button className="navigation_button" onClick={this.prev.bind(this)}>&lt;</button>
+        <button className="navigation_button" onClick={this.next.bind(this)}>&gt;</button>
+      </div>
+      <div>Current: {id}</div>
+      <span>Solved {solved} of {all}</span>
+
+    </div>)
   }
 }
 

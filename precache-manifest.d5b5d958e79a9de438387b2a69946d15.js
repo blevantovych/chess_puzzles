@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "573501233a407695e7b5d5b8e6efc7aa",
-    "url": "/chess_puzzles/static/media/wR.57350123.svg"
+    "revision": "4e4432a6b0dfce093177db46dc9bff48",
+    "url": "/chess_puzzles/static/media/wQ.4e4432a6.svg"
   },
   {
-    "revision": "726b472e8e4b4f49c17b",
-    "url": "/chess_puzzles/static/css/main.351b0d55.chunk.css"
+    "revision": "5df4cd46015eea9250ac",
+    "url": "/chess_puzzles/static/css/main.27e88671.chunk.css"
   },
   {
     "revision": "06c46d4ef9b5aeb913cb",
@@ -32,16 +32,12 @@ self.__precacheManifest = [
     "url": "/chess_puzzles/static/media/wB.e0eb761a.svg"
   },
   {
-    "revision": "f9c6e522d506c7c3a555e412d34630df",
-    "url": "/chess_puzzles/static/media/wN.f9c6e522.svg"
+    "revision": "573501233a407695e7b5d5b8e6efc7aa",
+    "url": "/chess_puzzles/static/media/wR.57350123.svg"
   },
   {
-    "revision": "726b472e8e4b4f49c17b",
-    "url": "/chess_puzzles/static/js/main.726b472e.chunk.js"
-  },
-  {
-    "revision": "4e4432a6b0dfce093177db46dc9bff48",
-    "url": "/chess_puzzles/static/media/wQ.4e4432a6.svg"
+    "revision": "5df4cd46015eea9250ac",
+    "url": "/chess_puzzles/static/js/main.5df4cd46.chunk.js"
   },
   {
     "revision": "bb430c603fae05171bfcc6760efda928",
@@ -56,12 +52,16 @@ self.__precacheManifest = [
     "url": "/chess_puzzles/static/media/bB.8a6bd56a.svg"
   },
   {
-    "revision": "0026f14668177f7dd0d4bab167b1a1cf",
-    "url": "/chess_puzzles/static/media/bN.0026f146.svg"
-  },
-  {
     "revision": "027332a07c4f25930a0e527a85965aa4",
     "url": "/chess_puzzles/static/media/bR.027332a0.svg"
+  },
+  {
+    "revision": "f9c6e522d506c7c3a555e412d34630df",
+    "url": "/chess_puzzles/static/media/wN.f9c6e522.svg"
+  },
+  {
+    "revision": "0026f14668177f7dd0d4bab167b1a1cf",
+    "url": "/chess_puzzles/static/media/bN.0026f146.svg"
   },
   {
     "revision": "aed026d0021b7ebfc2164946c0136010",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/chess_puzzles/static/media/bK.47af274b.svg"
   },
   {
-    "revision": "3e050b7eda13d994b2a676989634be9a",
+    "revision": "447c08763a3a2994329cf8103e083a6a",
     "url": "/chess_puzzles/index.html"
   }
 ];

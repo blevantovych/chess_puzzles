@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://blevantovych.github.io/chess_puzzles",
   "dependencies": {
+    "chess.js": "^0.10.2",
     "chessground": "^7.3.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

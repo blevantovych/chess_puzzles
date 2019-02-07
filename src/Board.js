@@ -1,5 +1,6 @@
-import {Chessground} from 'chessground'
+import { Chessground } from 'chessground'
 import React from 'react';
+import Swipeable from 'react-swipeable'
 
 const IDS_OF_SOLVED_POSITIONS = 'ids_of_solved_positions';
 
@@ -9,18 +10,25 @@ export default class Board extends React.Component {
     showSolution: false
   }
 
-  update () {
-    const {fen} = this.props.position;
+  update() {
+    const { fen } = this.props.position;
     const board = document.querySelector('#board')
 
     const orientation = this.props.whichSideMoves
-    Chessground(board, {
+    const chessground = Chessground(board, {
       orientation,
       viewOnly: false,
       fen,
+      animation: {
+        enabled: true,
+        duration: 5000
+      },
+      drawable: {
+        enabled: false
+      },
       events: {
         move: (from, to) => {
-          this.props.makeMove({from, to})
+          this.props.makeMove({ from, to })
           let ids = localStorage.getItem(IDS_OF_SOLVED_POSITIONS);
           if (ids) {
             ids = JSON.parse(ids)
@@ -37,53 +45,65 @@ export default class Board extends React.Component {
         }
       }
     });
+    // setTimeout(() => {
+    //   chessground.move('g6', 'g1')
+    // }, 500)
+    // console.log(chessground)
   }
 
 
   componentDidUpdate() {
     this.update();
   }
-  componentDidMount () {
+  componentDidMount() {
     this.update();
   }
 
   next() {
     this.props.next();
-    this.setState({showSolution: false})
+    this.setState({ showSolution: false })
   }
 
   prev() {
     this.props.prev();
-    this.setState({showSolution: false})
+    this.setState({ showSolution: false })
   }
 
   render() {
-    const {position: {info, solution}, all, solved, id} = this.props;
-    return (<div>
-      <div id="board"></div>
-      <div style={{marginTop: '20px'}}>
-        {info}
-      </div>
-      {(this.props.success || this.props.fail) && <div style={{marginTop: '20px'}}>
-        Solution: {solution}
-      </div>}
-      {this.props.success && <div style={{display: 'flex', alignItems: 'center'}}>
-        <div className="icon success">✓</div>
-        <div>Puzzle solved</div>
-      </div>}
-      {this.props.fail && <div style={{display: 'flex', alignItems: 'center'}}>
-        <div className="icon fail">✗</div>
-        <div>Puzzle failed</div>
-      </div>}
-      <div style={{marginTop: '5px'}}>
-        <button className="navigation_button" onClick={this.prev.bind(this)}>&lt;</button>
-        <button className="navigation_button" onClick={this.next.bind(this)}>&gt;</button>
-      </div>
-      <div>Current: {id}</div>
-      <span>Solved {solved} of {all}</span>
-
-    </div>)
+    const { position: { info, solution }, all, solved, id } = this.props;
+    return (
+      <Swipeable
+        style={{ height: '100%' }}
+        onSwipedLeft={this.next.bind(this)}
+        onSwipedRight={this.prev.bind(this)}
+      >
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '100%' }}>
+            <div id="board" style={{ width: '300px', height: '300px' }}></div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ marginTop: '20px' }}>
+              {info}
+            </div>
+            {(this.props.success || this.props.fail) && <div style={{ marginTop: '20px' }}>
+              Solution: {solution}
+            </div>}
+            {this.props.success && <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="icon success">✓</div>
+              <div>Puzzle solved</div>
+            </div>}
+            {this.props.fail && <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="icon fail">✗</div>
+              <div>Puzzle failed</div>
+            </div>}
+            <div style={{ marginTop: '5px' }}>
+              <button className="navigation_button" onClick={this.prev.bind(this)}>&lt;</button>
+              <button className="navigation_button" onClick={this.next.bind(this)}>&gt;</button>
+            </div>
+            <div>Current: {id}</div>
+            <span>Solved {solved} of {all}</span>
+          </div>
+        </div>
+      </Swipeable>)
   }
 }
-
-

@@ -16,12 +16,12 @@ const getPositionId = positions => {
   } else {
     ids = []
   }
-  return 0;
-  // for (let i = 0; i < positions.length; i++) {
-  //   if (!ids.includes(i)) {
-  //     return i;
-  //   }
-  // }
+  return 229
+  for (let i = 0; i < positions.length; i++) {
+    if (!ids.includes(i)) {
+      return i;
+    }
+  }
 }
 
 const getState = (index = getPositionId(positions)) => {

@@ -16,7 +16,6 @@ const getPositionId = positions => {
   } else {
     ids = []
   }
-  return 229
   for (let i = 0; i < positions.length; i++) {
     if (!ids.includes(i)) {
       return i;

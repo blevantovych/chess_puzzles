@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chess_puzzles/precache-manifest.44781a4f9ba1c1e97a4df5803231337a.js"
+  "/chess_puzzles/precache-manifest.35e4628eb96242d3f5b844551f244014.js"
 );
 
 workbox.clientsClaim();

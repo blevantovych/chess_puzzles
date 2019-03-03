@@ -1,14 +1,14 @@
 {
-  "main.css": "/chess_puzzles/static/css/main.4ba43924.chunk.css",
-  "main.js": "/chess_puzzles/static/js/main.6f735920.chunk.js",
-  "main.js.map": "/chess_puzzles/static/js/main.6f735920.chunk.js.map",
+  "main.css": "/chess_puzzles/static/css/main.6c13f68d.chunk.css",
+  "main.js": "/chess_puzzles/static/js/main.2248c050.chunk.js",
+  "main.js.map": "/chess_puzzles/static/js/main.2248c050.chunk.js.map",
   "static/js/1.290f8d7b.chunk.js": "/chess_puzzles/static/js/1.290f8d7b.chunk.js",
   "static/js/1.290f8d7b.chunk.js.map": "/chess_puzzles/static/js/1.290f8d7b.chunk.js.map",
   "runtime~main.js": "/chess_puzzles/static/js/runtime~main.2fd2043d.js",
   "runtime~main.js.map": "/chess_puzzles/static/js/runtime~main.2fd2043d.js.map",
-  "static/media/theme.css": "/chess_puzzles/static/media/wR.57350123.svg",
-  "static/css/main.4ba43924.chunk.css.map": "/chess_puzzles/static/css/main.4ba43924.chunk.css.map",
+  "static/media/theme.css": "/chess_puzzles/static/media/wB.e0eb761a.svg",
+  "static/css/main.6c13f68d.chunk.css.map": "/chess_puzzles/static/css/main.6c13f68d.chunk.css.map",
   "index.html": "/chess_puzzles/index.html",
-  "precache-manifest.35e4628eb96242d3f5b844551f244014.js": "/chess_puzzles/precache-manifest.35e4628eb96242d3f5b844551f244014.js",
+  "precache-manifest.703d935c8eaa2ef2d058dd654891775c.js": "/chess_puzzles/precache-manifest.703d935c8eaa2ef2d058dd654891775c.js",
   "service-worker.js": "/chess_puzzles/service-worker.js"
 }
